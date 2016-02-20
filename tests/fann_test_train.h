@@ -5,20 +5,23 @@
 
 class FannTestTrain : public FannTest {
 protected:
-    fann_type xorInput[8] = {
-            0.0, 0.0,
-            0.0, 1.0,
-            1.0, 0.0,
-            1.0, 1.0};
-    fann_type xorOutput[4] = {
-            0.0,
-            1.0,
-            1.0,
-            0.0};
+    static fann_type xorInput[8];
+    static fann_type xorOutput[4];
 
     virtual void SetUp();
 
     virtual void TearDown();
 };
+
+fann_type FannTestTrain::xorInput[8] = {
+            0.0, 0.0,
+            0.0, 1.0,
+            1.0, 0.0,
+            1.0, 1.0};
+fann_type FannTestTrain::xorOutput[4] = {
+            0.0,
+            1.0,
+            1.0,
+            0.0};
 
 #endif
